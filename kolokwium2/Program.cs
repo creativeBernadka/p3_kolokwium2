@@ -29,6 +29,7 @@ namespace kolokwium2
             Ranking ranking = new Ranking();
             ranking.getRankingByPoints(listOfGamers);
             ranking.getRankingByWins(listOfGamers);
+            ranking.getRankingPointsToWins(listOfGamers);
         }
     }
 }
