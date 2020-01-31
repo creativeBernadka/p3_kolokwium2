@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using kolokwium2.zad1;
 using kolokwium2.zad2;
 using kolokwium2.zad3;
+using kolokwium2.zad4;
 using kolokwium2.zad5;
 
 namespace kolokwium2
@@ -52,10 +54,14 @@ namespace kolokwium2
             // Console.WriteLine($"A: {a}, B: {b}, C: {c}, D: {d}, sum: {sum}");
             // Console.WriteLine(results);
             
+            //////// zad 4 /////////
+            
+            Crossroad crossroad = new Crossroad();
+            
             //////// zad 5 /////////
             
-            NumberReader numberReader = new NumberReader();
-            numberReader.sumNumbersFromFile("data.txt");
+            // NumberReader numberReader = new NumberReader();
+            // numberReader.sumNumbersFromFile("data.txt");
         }
     }
 }
