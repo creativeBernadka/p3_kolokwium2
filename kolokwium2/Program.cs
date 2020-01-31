@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using kolokwium2.zad1;
 
 namespace kolokwium2
 {
@@ -6,7 +8,26 @@ namespace kolokwium2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // zad 1
+            List<Gamer> listOfGamers = new List<Gamer>();
+            Random rnd = new Random();
+            DateTime start = new DateTime(2019, 10, 1);
+            int range = (DateTime.Today - start).Days;
+            DateTime RandomDay()
+            {
+                return start.AddDays(rnd.Next(range));
+            }
+            for (int i = 0; i < 100; i++)
+            {
+                listOfGamers.Add( new Gamer(
+                    rnd.Next(5000), 
+                    rnd.Next(1000),
+                    RandomDay()
+                    )
+                );
+            }
+            Ranking ranking = new Ranking();
+            ranking.getRankingByPoints(listOfGamers);
         }
     }
 }
