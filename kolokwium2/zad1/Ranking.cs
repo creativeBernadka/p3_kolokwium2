@@ -15,5 +15,16 @@ namespace kolokwium2.zad1
                 i--;
             }
         }
+
+        public void getRankingByWins(List<Gamer> gamers)
+        {
+            gamers.Sort((first, second) => first.Wins.CompareTo(second.Wins));
+            int i = gamers.Count;
+            foreach (var gamer in gamers)
+            {
+                Console.WriteLine($"#{i} Wins: {gamer.Wins}");
+                i--;
+            }
+        }
     }
 }

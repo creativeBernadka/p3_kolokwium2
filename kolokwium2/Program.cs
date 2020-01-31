@@ -21,13 +21,14 @@ namespace kolokwium2
             {
                 listOfGamers.Add( new Gamer(
                     rnd.Next(5000), 
-                    rnd.Next(1000),
+                    rnd.Next(200),
                     RandomDay()
                     )
                 );
             }
             Ranking ranking = new Ranking();
             ranking.getRankingByPoints(listOfGamers);
+            ranking.getRankingByWins(listOfGamers);
         }
     }
 }
