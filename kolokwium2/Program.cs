@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using kolokwium2.zad1;
 using kolokwium2.zad2;
 using kolokwium2.zad3;
+using kolokwium2.zad5;
 
 namespace kolokwium2
 {
@@ -44,12 +45,17 @@ namespace kolokwium2
             
             //////// zad 3 /////////
             
-            Random rnd = new Random();
-            Poll poll = new Poll(rnd.Next(25), rnd.Next(25), rnd.Next(25), rnd.Next(25));
-            (int a, int b, int c, int d, int sum) = poll.getNumberResults();
-            string results = poll.getStringResults();
-            Console.WriteLine($"A: {a}, B: {b}, C: {c}, D: {d}, sum: {sum}");
-            Console.WriteLine(results);
+            // Random rnd = new Random();
+            // Poll poll = new Poll(rnd.Next(25), rnd.Next(25), rnd.Next(25), rnd.Next(25));
+            // (int a, int b, int c, int d, int sum) = poll.getNumberResults();
+            // string results = poll.getStringResults();
+            // Console.WriteLine($"A: {a}, B: {b}, C: {c}, D: {d}, sum: {sum}");
+            // Console.WriteLine(results);
+            
+            //////// zad 5 /////////
+            
+            NumberReader numberReader = new NumberReader();
+            numberReader.sumNumbersFromFile("data.txt");
         }
     }
 }
